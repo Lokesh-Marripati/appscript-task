@@ -43,7 +43,8 @@ export default function ProductCard({ product }) {
           gap: 5px;
         }
 
-        h2, h3 {
+        h2,
+        h3 {
           margin: 0;
           font-size: 1rem;
           color: #2d3748;
@@ -53,48 +54,8 @@ export default function ProductCard({ product }) {
           font-size: 0.9rem;
           color: #4a5568;
         }
-
-        @media (max-width: 768px) {
-          .product-card {
-            padding: 10px;
-          }
-
-          .product-image {
-            max-height: 150px;
-          }
-
-          h2 {
-            font-size: 0.9rem;
-          }
-
-          h3 {
-            font-size: 0.85rem;
-          }
-
-          p {
-            font-size: 0.8rem;
-          }
-        }
-
-        @media (max-width: 480px) {
-          .product-card {
-            flex-direction: column;
-            gap: 5px;
-          }
-
-          h2 {
-            font-size: 0.8rem;
-          }
-
-          h3 {
-            font-size: 0.75rem;
-          }
-
-          p {
-            font-size: 0.7rem;
-          }
-        }
       `}</style>
     </div>
   );
 }
+
