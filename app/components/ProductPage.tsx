@@ -4,10 +4,10 @@ import React, { useEffect, useState } from 'react';
 import './FilterSection.css';
 import './product.css'
 
-type FilterOption = {
-  label: string;
-  value: string;
-};
+// type FilterOption = {
+//   label: string;
+//   value: string;
+// };
 
 const filters = [
   { label: 'IDEAL FOR', value: 'All' },
@@ -21,18 +21,23 @@ const filters = [
 ];
 
 const ProductPage: React.FC = () => {
-  const [products, setProducts] = useState<any[]>([]);
+  const [products, setProducts] = useState<Product[]>([]);
   const [filteredProducts, setFilteredProducts] = useState<any[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
-  const [searchTerm, setSearchTerm] = useState<string>('');
   const [sort, setSort] = useState<string>('recommended');
   const [expandedFilters, setExpandedFilters] = useState<Set<string>>(new Set());
+ 
+  type Product = {
+    id: number;
+    name: string;
+    price: number;
+  };
 
   useEffect(() => {
     const fetchProducts = async () => {
       try {
         const res = await fetch('https://fakestoreapi.com/products', {
-          cache: 'no-store', // Ensure fresh data
+          cache: 'no-store',
         });
         if (!res.ok) throw new Error('Failed to fetch products');
         const data = await res.json();
@@ -48,14 +53,14 @@ const ProductPage: React.FC = () => {
     fetchProducts();
   }, []);
 
-  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const term = e.target.value.toLowerCase();
-    setSearchTerm(term);
-    const filtered = products.filter((product) =>
-      product.title.toLowerCase().includes(term)
-    );
-    setFilteredProducts(filtered);
-  };
+  // const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+  //   const term = e.target.value.toLowerCase();
+  //   setSearchTerm(term);
+  //   const filtered = products.filter((product) =>
+  //     product.title.toLowerCase().includes(term)
+  //   );
+  //   setFilteredProducts(filtered);
+  // };
 
   const handleSort = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const value = e.target.value;
@@ -85,8 +90,8 @@ const ProductPage: React.FC = () => {
   };
 
   return (
-    <div style={styles.container}>
-      <aside style={styles.sidebar}>
+    <div className="container">
+      <aside className="sidebar">
       <div className="filter-section">
       <div className="filter-item">
         <label>
@@ -112,11 +117,11 @@ const ProductPage: React.FC = () => {
     </div>
       </aside>
 
-      <main style={styles.mainContent}>
-        <header style={styles.header}>
-          <div style={styles.headerActions}>
-            <span>{filteredProducts.length} Items</span>
-            <select value={sort} onChange={handleSort} style={styles.dropdown}>
+      <main className="main-content">
+      <header className="header">
+      <div className="header-actions">
+      <span>{filteredProducts.length} Items</span>
+      <select value={sort} onChange={handleSort} className="dropdown">
               <option value="recommended">Recommended</option>
               <option value="price_low_high">Price: Low to High</option>
               <option value="price_high_low">Price: High to Low</option>
@@ -144,63 +149,4 @@ const ProductPage: React.FC = () => {
     </div>
   );
 };
-
-const styles = {
-  container: {
-    display: 'flex',
-    fontFamily: 'Arial, sans-serif',
-  },
-  sidebar: {
-    width: '20%',
-    padding: '20px',
-    borderRight: '1px solid #ddd',
-  },
-  mainContent: {
-    width: '80%',
-    padding: '20px',
-  },
-  header: {
-    marginBottom: '20px',
-  },
-  headerActions: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    marginTop: '10px',
-  },
-  dropdown: {
-    padding: '5px',
-  },
-  productGrid: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
-    gap: '20px',
-    border: '1px solid #e2e8f0',
-  },
-  productCard: {
-    borderRadius: '5px',
-    padding: '10px',
-    textAlign: 'center',
-  },
-  productImage: {
-    border: '1px solid #e2e8f0',
-    width: '100%',
-    height: 'auto',
-    marginBottom: '10px',
-  },
-  productTitle: {
-    fontSize: '16px',
-    fontWeight: 'bold',
-    marginBottom: '5px',
-  },
-  productPrice: {
-    color: '#555',
-  },
-  searchInput: {
-    width: '100%',
-    padding: '10px',
-    marginBottom: '20px',
-  },
-};
-
 export default ProductPage;

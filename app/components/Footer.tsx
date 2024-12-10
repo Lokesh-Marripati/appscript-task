@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import './Footer.css';
 
 const Footer: React.FC = () => {
@@ -53,16 +54,16 @@ const Footer: React.FC = () => {
         <div className="footer-column">
           <h4>FOLLOW US</h4>
           <div className="social-icons">
-          <img src="/Images/LinkedIn.png" alt="LinkedIn" />
-          <img src="/Images/Instagram.png" alt="Instagram" />
+          <Image src="/Images/LinkedIn.png" alt="LinkedIn" width={60} height={50} />
+          <Image src="/Images/Instagram.png" alt="Instagram" width={60} height={50} />
           </div>
-          <h4>Appscrip Accept</h4>
+         <h4>Appscrip</h4>
           <div className="payment-icons">
-          <img src="/Images/google-pay.png" alt="Google Pay" />
-          <img src="/Images/master-card.png" alt="MasterCard" />
-          <img src="/Images/phone-pay.png" alt="Phonepay" />
-          <img src="/Images/apple-pay.png" alt="Apple Pay" />
-          <img src="/Images/paypal.png" alt="PayPal" />
+          <Image src="/Images/google-pay.png" alt="Google Pay" width={60} height={50} />
+          <Image src="/Images/master-card.png" alt="MasterCard" width={60} height={50} />
+          <Image src="/Images/phone-pay.png" alt="Phonepay" width={60} height={50} />
+          <Image src="/Images/apple-pay.png" alt="Apple Pay" width={60} height={50} />
+          <Image src="/Images/paypal.png" alt="PayPal" width={60} height={50} />
 
           </div>
         </div>
