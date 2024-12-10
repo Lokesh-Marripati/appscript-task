@@ -1,8 +1,10 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import Image from 'next/image';
 import "./FilterSection.css";
 import "./product.css";
+
 
 type Product = {
   id: number;
@@ -134,7 +136,14 @@ const ProductPage: React.FC = () => {
         <section className="product-grid">
           {filteredProducts.map((product) => (
             <div key={product.id} className="product-card">
-              <img src={product.image} alt={product.title} className="product-image" />
+             <Image 
+             src={product.image} 
+             alt={product.title} 
+            className="product-image" 
+            width={200} 
+            height={200} 
+             priority 
+/>
               <div className="product-info">
                 <h4 className="product-title">{product.title}</h4>
                 <p className="product-price">${product.price.toFixed(2)}</p>
