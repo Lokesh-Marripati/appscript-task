@@ -5,9 +5,9 @@ const Header = () => {
   return (
     <header className="header">
       <div className="top-bar">
-        <span className="top-bar-text">Lorem ipsum dolor</span>
-        <span className="top-bar-text">Lorem ipsum dolor</span>
-        <span className="top-bar-text">Lorem ipsum dolor</span>
+        <span className="top-bar-text">Appscrip</span>
+        <span className="top-bar-text">Appscrip</span>
+        <span className="top-bar-text">Appscrip</span>
       </div>
       <div className="nav-bar">
         <div className="logo-section">
