@@ -26,15 +26,4 @@ const ProductSection: React.FC = () => {
     </div>
   );
 };
-const styles ={
-    headerActions: {
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        marginTop: '10px',
-      },
-      dropdown: {
-        padding: '5px',
-      }
-}
 export default ProductSection;
