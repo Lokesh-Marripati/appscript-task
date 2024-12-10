@@ -1,4 +1,4 @@
-/* ProductSection.css */
+
 .product-section {
     font-family: 'Arial', sans-serif;
     text-align: center;
@@ -49,5 +49,62 @@
   .sort-menu span {
     font-size: 14px;
     font-weight: bold;
+  }
+ 
+@media (max-width: 768px) {
+    .product-section {
+      padding: 10px;
+    }
+  
+    .product-header .title {
+      font-size: 20px;
+    }
+  
+    .product-header .subtitle {
+      font-size: 14px;
+      line-height: 1.4;
+    }
+  
+    .product-footer {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .item-count {
+      margin-bottom: 10px;
+      font-size: 12px;
+    }
+  
+    .filter-toggle {
+      font-size: 12px;
+    }
+  }
+  
+ 
+  @media (max-width: 768px) {
+    .sort-menu span {
+      font-size: 12px;
+    }
+  }
+  
+ 
+  @media (max-width: 480px) {
+    .product-header .title {
+      font-size: 18px;
+    }
+  
+    .product-header .subtitle {
+      font-size: 12px;
+    }
+  
+    .product-footer {
+      padding-top: 5px;
+    }
+  
+    .item-count,
+    .filter-toggle,
+    .sort-menu span {
+      font-size: 10px;
+    }
   }
   

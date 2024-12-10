@@ -1,4 +1,4 @@
-/* FilterSection.css */
+
 .filter-section {
     font-family: 'Arial', sans-serif;
     font-size: 14px;
@@ -35,5 +35,80 @@
     border: none;
     border-top: 1px solid #ddd;
     margin: 0;
+  }
+ 
+@media (max-width: 768px) {
+    .filter-section {
+      width: 100%;
+      font-size: 12px;
+      padding: 10px; 
+    }
+  
+    .filter-item {
+      padding: 8px 0; 
+    }
+  
+    .filter-header {
+      font-size: 14px; 
+    }
+  
+    .filter-content {
+      font-size: 12px; 
+      padding: 5px 0;
+    }
+  
+    .toggle-icon {
+      font-size: 10px;
+    }
+  }
+  
+  
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .filter-section {
+      width: 250px; 
+      font-size: 13px; 
+      padding: 15px; 
+    }
+  
+    .filter-item {
+      padding: 10px 0;
+    }
+  
+    .filter-header {
+      font-size: 15px;
+    }
+  
+    .filter-content {
+      font-size: 13px;
+    }
+  
+    .toggle-icon {
+      font-size: 11px;
+    }
+  }
+  
+ 
+  @media (min-width: 1025px) {
+    .filter-section {
+      width: 300px; 
+      font-size: 14px; 
+      padding: 20px;
+    }
+  
+    .filter-item {
+      padding: 12px 0;
+    }
+  
+    .filter-header {
+      font-size: 16px; 
+    }
+  
+    .filter-content {
+      font-size: 14px;
+    }
+  
+    .toggle-icon {
+      font-size: 12px;
+    }
   }
   
