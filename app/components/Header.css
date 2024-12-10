@@ -41,9 +41,8 @@
   
   .nav {
     display: flex;
-    gap: 50px;
+    gap: 30px;
    position: relative;
-   margin-right:200px;
    
   }
   .nav a{
@@ -68,7 +67,7 @@
   .icons {
     display: flex;
     gap: 15px;
-    left: 150px;
+    left: 0px;
     position: relative;
   }
   .icon-button {

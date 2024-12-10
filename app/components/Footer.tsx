@@ -59,11 +59,11 @@ const Footer: React.FC = () => {
           </div>
          <h4>Appscrip</h4>
           <div className="payment-icons">
-          <Image src="/Images/google-pay.png" alt="Google Pay" width={60} height={50} />
-          <Image src="/Images/master-card.png" alt="MasterCard" width={60} height={50} />
-          <Image src="/Images/phone-pay.png" alt="Phonepay" width={60} height={50} />
-          <Image src="/Images/apple-pay.png" alt="Apple Pay" width={60} height={50} />
-          <Image src="/Images/paypal.png" alt="PayPal" width={60} height={50} />
+          <Image src="/Images/google-pay.png" alt="Google Pay" width={40} height={40} />
+          <Image src="/Images/master-card.png" alt="MasterCard" width={40} height={40} />
+          <Image src="/Images/phone-pay.png" alt="Phonepay" width={40} height={40} />
+          <Image src="/Images/apple-pay.png" alt="Apple Pay" width={40} height={40} />
+          <Image src="/Images/paypal.png" alt="PayPal" width={40} height={40}/>
 
           </div>
         </div>
