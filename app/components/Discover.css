@@ -1,0 +1,53 @@
+/* ProductSection.css */
+.product-section {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  .product-header .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .product-header .subtitle {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+    margin: 0;
+  }
+  
+  .product-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+  }
+  
+  .item-count {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .filter-toggle {
+    font-size: 14px;
+    color: #6a5acd;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .filter-toggle:hover {
+    text-decoration: underline;
+  }
+  
+  .sort-menu span {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  

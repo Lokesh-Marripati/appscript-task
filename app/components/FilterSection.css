@@ -1,0 +1,39 @@
+/* FilterSection.css */
+.filter-section {
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    color: #333;
+    width: 300px;
+  }
+  
+  .filter-item {
+    padding: 10px 0;
+  }
+  
+  .filter-header {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .filter-header:hover {
+    color: #6a5acd;
+  }
+  
+  .toggle-icon {
+    font-size: 12px;
+  }
+  
+  .filter-content {
+    padding: 8px 0;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 0;
+  }
+  
