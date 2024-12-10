@@ -19,25 +19,32 @@ const filters = [
   { label: 'RAW MATERIALS', value: 'All' },
   { label: 'PATTERN', value: 'All' },
 ];
-
+type Product = {
+  id: number;
+  title: string;
+  price: number;
+  description: string;
+  category: string;
+  image: string;
+  rating: {
+    rate: number;
+    count: number;
+  };
+};
 const ProductPage: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([]);
-  const [filteredProducts, setFilteredProducts] = useState<any[]>([]);
+  const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [sort, setSort] = useState<string>('recommended');
   const [expandedFilters, setExpandedFilters] = useState<Set<string>>(new Set());
  
-  type Product = {
-    id: number;
-    name: string;
-    price: number;
-  };
+  
 
   useEffect(() => {
     const fetchProducts = async () => {
       try {
         const res = await fetch('https://fakestoreapi.com/products', {
-          cache: 'no-store',
+          cache: 'no-store', 
         });
         if (!res.ok) throw new Error('Failed to fetch products');
         const data = await res.json();

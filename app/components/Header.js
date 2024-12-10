@@ -1,5 +1,6 @@
 import React from 'react';
-import './Header.css'; // Import the CSS file
+import Image from 'next/image';
+import './Header.css'; 
 
 const Header = () => {
   return (
@@ -11,7 +12,7 @@ const Header = () => {
       </div>
       <div className="nav-bar">
         <div className="logo-section">
-          <img src="/images/appscrip.png" alt="Logo" className="logo" />
+          <Image src="/images/appscrip.png" alt="Logo" className="logo" width={150} height={150} />
           {/* <span className="logo-text">LOGO</span> */}
         </div>
         <nav className="nav">
